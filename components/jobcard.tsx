@@ -27,11 +27,11 @@ export interface Job {
   description: string;
 }
 
-interface ComponentProps {
+interface JobCardProps {
   jobs: Job[];
 }
 
-export function Component({ jobs }: ComponentProps) {
+export function JobCard({ jobs }: JobCardProps) {
   return (
     <section className="bg-background py-12 md:py-16 lg:py-20">
       <div className="container px-4 md:px-6">

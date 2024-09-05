@@ -1,8 +1,7 @@
 "use client"
-import { Component } from "@/components/component";
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
-import { Job } from "@/components/component";
+import { JobCard, Job } from "@/components/jobcard";
 
 export default function Home() {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -21,7 +20,7 @@ export default function Home() {
 
   return (
     <div>
-      <Component jobs={jobs} />
+      <JobCard jobs={jobs} />
     </div>
   );
 }

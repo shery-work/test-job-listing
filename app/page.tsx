@@ -1,7 +1,15 @@
 "use client"
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
-import { JobCard, Job } from "@/components/jobcard";
+import { Component } from '@/components/component';
+
+interface Job {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  description: string;
+}
 
 export default function Home() {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -20,7 +28,8 @@ export default function Home() {
 
   return (
     <div>
-      <JobCard jobs={jobs} />
+      {/* <JobCard jobs={jobs} /> */}
+      <Component />
     </div>
   );
 }
